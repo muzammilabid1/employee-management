@@ -1,5 +1,5 @@
 import { value } from "./utils.js";
-alert("UTILS WORKS");
+import { saveCompanies, getCompanies, saveCurrentUser } from "./storage.js";
 
 
 const showPassEye = document.querySelector(".password-toggle");
