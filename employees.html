@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>view all employees</title>
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <!-- <link rel="stylesheet" href="./assests/css/sidebar.css"> -->
+    <link rel="stylesheet" href="./assests/css/employees.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <button class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <aside class="sidebar"></aside>
+    <section class="main-content">
+      <div class="container">
+        <header>
+          <p data-aos="fade-down">employees</p>
+          <!-- <button>+ add employee</button> -->
+          <a href="addcontact.html" data-aos="fade-right">+ add employee</a>
+        </header>
+        <main>
+          <section class="search-section" data-aos="fade-up">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="search by name , email or phone number or employee id"
+            />
+            <button class="filter-btn">
+              <i class="fa-solid fa-filter"></i>
+              filter
+            </button>
+          </section>
+          <section class="employees">
+            <!-- ==========================
+            Employee Table -->
+
+            <div class="table-wrapper" data-aos="fade-up">
+              <table class="employees-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+
+                    <th>Employee</th>
+
+                    <th>Job Title</th>
+
+                    <th>Department</th>
+
+                    <th>Status</th>
+
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody class="table-body">
+                  <!-- ================= Employee ================= -->
+                </tbody>
+              </table>
+              <div class="search-empty">
+                <i class="fa-solid fa-user-slash"></i>
+                <h3>No employees found</h3>
+                <p>We couldn't find any employees matching your search.</p>
+              </div>
+            </div>
+
+            <div class="employees-empty">
+              <div class="empty-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+
+              <h3>No employees yet</h3>
+
+              <p>
+                Your employee directory is empty. Add your first employee to get
+                started.
+              </p>
+
+              <a href="addcontact.html" class="add-employee-btn"
+                ><i class="fa-solid fa-plus"></i> Add employee</a
+              >
+            </div>
+            <!-- ==========================
+            Pagination -->
+            <div class="employees-footer" data-aos="fade-up">
+              <p class="pagination-para">Showing 1 to 10 of 50 Employees</p>
+
+              <div class="pagination">
+                <button>
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <div class="page-numbers"></div>
+
+                <button>
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </section>
+  </body>
+  <script type="module" src="./assests/js/index.js"></script>
+  <script type="module" src="./assests/js/employees.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true,
+      offset: 80,
+    });
+  </script>
+</html>

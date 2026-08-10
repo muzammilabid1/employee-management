@@ -1,0 +1,545 @@
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2727bf;
+  border-radius: 5rem;
+
+  &:hover {
+    background-color: hsl(240, 64%, 55%);
+  }
+}
+
+/* Firefox */
+* {
+  /* scrollbar-width: thin; */
+  scrollbar-color: #2727bf #111827;
+}
+
+.signup-page {
+  min-height: 100dvh;
+  background-color: hsl(248, 40%, 97%);
+}
+
+
+/* =========================================================
+   Main Layout
+========================================================= */
+
+.signup-layout {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+
+/* =========================================================
+   Branding Section
+========================================================= */
+
+.signup-brand {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5rem;
+
+  background:
+    linear-gradient(
+      145deg,
+      hsl(246, 63%, 27%),
+      hsl(246, 63%, 45%)
+    );
+
+  color: var(--white-clr);
+
+  & .brand-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 48rem;
+  }
+
+  & .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 7rem;
+    height: 7rem;
+
+    margin-bottom: 2.5rem;
+
+    border-radius: 1.8rem;
+
+    background-color: rgb(255 255 255 / 0.12);
+    border: 1px solid rgb(255 255 255 / 0.2);
+
+    backdrop-filter: blur(1rem);
+
+    & i {
+      font-size: 4rem;
+    }
+  }
+
+  & h1 {
+    margin-bottom: 0.5rem;
+
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+  }
+
+  & h2 {
+    margin-bottom: 2rem;
+
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  & p {
+    max-width: 42rem;
+
+    font-size: 1.5rem;
+    line-height: 1.8;
+
+    color: rgb(255 255 255 / 0.75);
+  }
+}
+
+
+/* =========================================================
+   Decorative Circles
+========================================================= */
+
+.brand-decoration {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  & span {
+    position: absolute;
+
+    width: 25rem;
+    height: 25rem;
+
+    border-radius: 50%;
+
+    border: 1px solid rgb(255 255 255 / 0.08);
+  }
+
+  & span:nth-child(1) {
+    width: 45rem;
+    height: 45rem;
+
+    right: -25rem;
+    bottom: -20rem;
+  }
+
+  & span:nth-child(2) {
+    width: 30rem;
+    height: 30rem;
+
+    left: -20rem;
+    top: -15rem;
+  }
+
+  & span:nth-child(3) {
+    width: 15rem;
+    height: 15rem;
+
+    right: 10%;
+    top: 10%;
+  }
+}
+
+
+/* =========================================================
+   Signup Content
+========================================================= */
+
+.signup-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem;
+
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   Signup Card
+========================================================= */
+
+.signup-card {
+  width: min(100%, 52rem);
+
+  padding: 4rem;
+
+  border: 1px solid hsl(250, 20%, 90%);
+  border-radius: 2rem;
+
+  background-color: #fff;
+
+  box-shadow: 0 2rem 5rem rgb(35 30 80 / 0.08);
+}
+
+
+/* =========================================================
+   Header
+========================================================= */
+
+.signup-header {
+  margin-bottom: 3rem;
+
+  & .signup-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    margin-bottom: 1rem;
+
+    color: hsl(246, 63%, 58%);
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+  }
+
+  & h1 {
+    margin-bottom: 1rem;
+
+    color: hsl(250, 25%, 18%);
+
+    font-size: 2.8rem;
+    text-transform: capitalize;
+  }
+
+  & > p:last-child {
+    color: hsl(250, 10%, 55%);
+
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================================
+   Form
+========================================================= */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+
+.form-group {
+  & label {
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    color: hsl(250, 20%, 25%);
+
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+
+
+/* =========================================================
+   Input Wrapper
+========================================================= */
+
+.input-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  & > i {
+    position: absolute;
+    left: 1.4rem;
+
+    color: hsl(250, 10%, 58%);
+
+    font-size: 1.5rem;
+
+    pointer-events: none;
+
+    transition: color 0.2s ease;
+  }
+
+  & input {
+    width: 100%;
+
+    padding: 1.25rem 4.2rem;
+
+    border: 1.5px solid hsl(250, 15%, 84%);
+    border-radius: var(--radius-md);
+
+    background-color: hsl(248, 50%, 99%);
+
+    color: hsl(250, 20%, 20%);
+
+    font-size: 1.4rem;
+
+    outline: none;
+
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+
+    &::placeholder {
+      color: hsl(250, 10%, 62%);
+    }
+
+    &:hover {
+      border-color: hsl(246, 45%, 70%);
+    }
+
+    &:focus {
+      border-color: hsl(246, 63%, 65%);
+
+      background-color: #fff;
+
+      box-shadow:
+        0 0 0 3px hsl(246, 63%, 75%, 0.18);
+    }
+
+    &:focus + .password-toggle,
+    &:focus ~ i {
+      color: hsl(246, 63%, 60%);
+    }
+  }
+
+  &:focus-within > i {
+    color: hsl(246, 63%, 60%);
+  }
+}
+
+
+/* =========================================================
+   Password Toggle
+========================================================= */
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: hsl(250, 10%, 58%);
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: hsl(246, 63%, 95%);
+    color: hsl(246, 63%, 55%);
+  }
+}
+
+
+/* =========================================================
+   Signup Button
+========================================================= */
+
+.signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+
+  margin-top: 0.8rem;
+  padding: 1.4rem 2rem;
+
+  border: none;
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(
+      135deg,
+      hsl(246, 63%, 65%),
+      hsl(246, 63%, 55%)
+    );
+
+  color: #fff;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  text-transform: capitalize;
+
+  cursor: pointer;
+
+  box-shadow: 0 0.8rem 2rem hsl(246, 63%, 55%, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+
+  & i {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 1.2rem 2.5rem hsl(246, 63%, 55%, 0.28);
+
+    & i {
+      transform: translateX(4px);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.signup-footer {
+  margin-top: 2.5rem;
+
+  padding-top: 2rem;
+
+  border-top: 1px solid hsl(250, 15%, 92%);
+
+  text-align: center;
+
+  & p {
+    color: hsl(250, 10%, 55%);
+    font-size: 1.3rem;
+  }
+
+  & a {
+    color: hsl(246, 63%, 58%);
+
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/* =========================================================
+   Responsive Design
+========================================================= */
+
+@media (width <= 900px) {
+  .signup-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-brand {
+    min-height: 28rem;
+
+    padding: 4rem;
+
+    text-align: center;
+
+    & .brand-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & .brand-logo {
+      width: 5.5rem;
+      height: 5.5rem;
+      margin-bottom: 1.5rem;
+
+      & i {
+        font-size: 3rem;
+      }
+    }
+
+    & h1 {
+      font-size: 3.5rem;
+    }
+
+    & h2 {
+      font-size: 1.8rem;
+    }
+
+    & p {
+      display: none;
+    }
+  }
+
+  .signup-content {
+    padding: 3rem 2rem;
+  }
+}
+
+
+@media (width <= 500px) {
+  .signup-brand {
+    min-height: 20rem;
+
+    padding: 2.5rem;
+
+    & h1 {
+      font-size: 3rem;
+    }
+
+    & h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .signup-card {
+    padding: 2.5rem 2rem;
+
+    border-radius: 1.5rem;
+  }
+
+  .signup-header {
+    margin-bottom: 2.5rem;
+
+    & h1 {
+      font-size: 2.3rem;
+    }
+  }
+}

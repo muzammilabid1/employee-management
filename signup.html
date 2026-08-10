@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>EMS | Sign Up</title>
+
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <link rel="stylesheet" href="./assests/css/signup.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="signup-page">
+    <main class="signup-layout">
+
+      <!-- Branding section -->
+      <section class="signup-brand">
+
+        <div class="brand-content">
+          <div class="brand-logo">
+            <i class="fa-solid fa-address-book"></i>
+          </div>
+
+          <h1>EMS</h1>
+
+          <h2>Employee Management System</h2>
+
+          <p>
+            Manage your employees, organize your workforce,
+            and keep everything in one place.
+          </p>
+        </div>
+
+        <div class="brand-decoration">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+      </section>
+
+
+      <!-- Signup section -->
+      <section class="signup-content">
+
+        <div class="signup-card">
+
+          <header class="signup-header">
+            <p class="signup-eyebrow">
+              <i class="fa-solid fa-sparkles"></i>
+              get started
+            </p>
+
+            <h1>create your account</h1>
+
+            <p>
+              Set up your company account to start managing
+              your employees.
+            </p>
+          </header>
+
+
+          <form class="signup-form">
+
+            <!-- Company name -->
+            <div class="form-group">
+              <label for="company-name">
+                company name
+              </label>
+
+              <div class="input-wrapper">
+                <i class="fa-regular fa-building"></i>
+
+                <input
+                  type="text"
+                  name="company-name"
+                  id="company-name"
+                  placeholder="Enter company name"
+                  autocomplete="organization"
+                  required
+                />
+              </div>
+            </div>
+
+
+            <!-- Admin name -->
+            <div class="form-group">
+              <label for="admin-name">
+                admin name
+              </label>
+
+              <div class="input-wrapper">
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                  type="text"
+                  name="admin-name"
+                  id="admin-name"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">
+                email address
+              </label>
+
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+
+            <!-- Password -->
+            <div class="form-group">
+              <label for="password">
+                password
+              </label>
+
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  aria-label="Show password"
+                >
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+
+            <!-- Confirm password -->
+            <div class="form-group">
+              <label for="confirm-password">
+                confirm password
+              </label>
+
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit" class="signup-btn">
+              create account
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+          </form>
+
+
+          <footer class="signup-footer">
+            <p>
+              Already have an account?
+              <a href="index.html">login</a>
+            </p>
+          </footer>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <script type="module" src="./assests/js/signup.js"></script>
+  </body>
+</html>

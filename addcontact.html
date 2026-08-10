@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <link rel="stylesheet" href="./assests/css/sidebar.css" />
+    <link rel="stylesheet" href="./assests/css/addcontact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="addcontact-page">
+    <button class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <aside class="sidebar"></aside>
+    <section class="main-content">
+        <div class="container">
+      <header>
+        <button class="back-btn">
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </button>
+        <h1>add employee</h1>
+      </header>
+      <form class="employee-form" >
+        <div class="input-group1">
+          <div class="pic-upload">
+            <p>profile picture</p>
+            <label for="picture">
+              <i class="fa-solid fa-camera"></i>
+              <span class="pic-text">upload photo</span>
+            </label>
+            <input
+              type="file"
+              name="picture"
+              id="picture"
+              accept="image/*"
+              required
+              hidden
+            />
+          </div>
+          <div>
+            <div class="id">
+              <label for="employee-id">employee id</label>
+              <input
+                type="text"
+                name="id"
+                id="employee-id"
+                placeholder="auto generated"
+                required
+                readonly
+              />
+            </div>
+            <div class="names">
+              <div class="first-name">
+                <label for="first-name">first name</label>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  placeholder="enter first name"
+                  required
+                />
+              </div>
+              <div class="last-name">
+                <label for="last-name">last name</label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="enter last name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="email">
+            <label for="email">email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="enter email"
+              required
+            />
+          </div>
+          <div class="phone">
+            <label for="phone">phone</label>
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone"
+              placeholder="phone number"
+              required
+            />
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="cnic">
+            <label for="cnic">CNIC</label>
+            <input
+              type="text"
+              name="cnic"
+              id="cnic"
+              placeholder="42101-1234567-1"
+              pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}"
+              required
+            />
+          </div>
+          <div class="dob">
+            <label for="dob">Date of birth</label>
+            <input type="date" name="dob" id="dob" required/>
+          </div>
+          <div class="gender">
+            <label for="gender">gender</label>
+            <select name="gender" id="gender" required>
+              <option value="" selected disabled>Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="job">
+            <label for="job-title">job title</label>
+            <input
+              type="text"
+              name="job-title"
+              id="job-title"
+              placeholder="Enter job title"
+              required
+            />
+          </div>
+          <div class="department">
+            <label for="department">department</label>
+            <input
+              type="text"
+              name="department"
+              id="department"
+              placeholder="enter department name"
+              required
+            />
+          </div>
+        </div>
+        <div class="input-group input-group--3cols">
+          <div class="employment-type">
+            <label for="employment-type">Employment Type</label>
+            <select id="employment-type" name="employmentType" required>
+              <option value="" selected disabled>Select Employment Type</option>
+              <option value="FullTime">Full Time</option>
+              <option value="PartTime">Part Time</option>
+              <option value="Contract">Contract</option>
+              <option value="Internship">Internship</option>
+              <option value="Temporary">Temporary</option>
+              <option value="Freelance">Freelance</option>
+            </select>
+          </div>
+          <div class="joining-date">
+            <label for="joining-date">joining date</label>
+            <input type="date" name="joining date" id="joining-date" required/>
+          </div>
+          <div class="salary">
+            <label for="salary">salary</label>
+            <input
+              type="number"
+              name="salary"
+              id="salary"
+              min="0"
+              step="1"
+              placeholder="enter salary amount"
+              required
+            />
+          </div>
+        </div>
+        <div class="address">
+          <label for="address">address</label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="enter address"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <div class="emergency-contact">
+            <label for="emergency-contact">emergency contact</label>
+            <input
+              type="text"
+              name="emergency-contact"
+              id="emergency-contact"
+              placeholder="enter contact name"
+              required
+            />
+          </div>
+          <div class="emergency-phone">
+            <label for="emergency-phone">emergency phone</label>
+            <input
+              type="tel"
+              name="emergency-phone"
+              id="emergency-phone"
+              pattern="[0-9]{11}"
+              placeholder="enter emergency phone number"
+              required
+            />
+          </div>
+        </div>
+        <div class="last-input--group">
+          <div class="status">
+            <label for="status">status</label>
+            <select name="status" id="status" required>
+              <option value="" selected disabled>Select Status</option>
+              <option value="active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+          </div>
+          <button type="submit" class="save-btn">save employee</button>
+        </div>
+      </form>
+      </div>
+    </section>
+  </body>
+  <script type="module" src="./assests/js/index.js"></script>
+  <script type="module" src="./assests/js/addemployee.js"></script>
+</html>

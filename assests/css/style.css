@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /*========== Colors ==========*/
+
+  --primary-clr: #6366f1;
+  --secondary-clr: #8b5cf6;
+
+  --white-clr: #fff;
+  --black-clr: #111827;
+
+  --body-bg-clr: #f8fafc;
+  --surface-clr: #fff;
+
+  --heading-clr: #1f2937;
+  --text-clr: #6b7280;
+
+  --border-clr: #e5e7eb;
+
+  /*========== Font ==========*/
+
+  --primary-ff: "Poppins", sans-serif;
+
+  /*========== Font Sizes ==========*/
+
+  --fs-200: 1.4rem;
+  --fs-300: 1.6rem;
+  --fs-400: 2rem;
+  --fs-500: 2.8rem;
+
+  /*========== Font Weight ==========*/
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /*========== Radius ==========*/
+
+  --radius-sm: 0.8rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 2rem;
+
+  /*========== Shadow ==========*/
+
+  --shadow-sm: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.18);
+  /*========== Transition ==========*/
+
+  --transition: all 0.3s ease;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Inter, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+button {
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+.common-heading {
+  font-size: clamp(2.8rem, 4vw, 3.8rem);
+  font-weight: 700;
+  /* color: var(--heading-color); */
+  /* line-height: 1.2; */
+}
+
+.common-para {
+  /* margin-top: 1rem; */
+  font-size: 1.7rem;
+  /* line-height: 1.7; */
+}
+
+/* for grid */
+.grid-four-cols{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
