@@ -26,11 +26,10 @@ signupForm.addEventListener("submit", (e) => {
         alert("This email is already registered. Please use another email.");
         return;
     }
-    if (confirmPassword !== password && uniqueEmail) {
+    if (confirmPassword !== password ) {
         alert("Passwords do not match. Please try again.")
         return;
     }
-    console.log(compName, adminName, email, password, confirmPassword);
 
     const company = { id: crypto.randomUUID(), compName, adminName, email, password, confirmPassword };
     console.log(company);
