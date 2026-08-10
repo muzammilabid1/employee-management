@@ -52,6 +52,8 @@ export const displayEmployee = (employee) => {
                       </td>`;
   tableBody.append(tableRow);
 }
+const pagination = document.querySelector(".employees-footer");
+const emptyState = document.querySelector(".employees-empty");
 const renderEmployees = employees => {
     const currentPageEmployees = getCurrentPageEmployees(employees);
 
@@ -59,10 +61,12 @@ const renderEmployees = employees => {
 
     if (employees.length === 0) {
         emptyState.style.display = "flex";
+        pagination.style.display = "none";
         return;
     }
 
     emptyState.style.display = "none";
+    pagination.style.display = "block";
 
     currentPageEmployees.forEach(employee => {
         displayEmployee(employee);
@@ -76,7 +80,6 @@ const allEmployees = getEmployees();
 const currCompany = getCurrentUser();
 const currCompanyEmployees = allEmployees.filter(employee => employee.companyId === currCompany);
 renderEmployees(currCompanyEmployees);
-const emptyState = document.querySelector(".employees-empty");
 
 
 tableBody.addEventListener("click", (e) => {
@@ -136,7 +139,6 @@ if (filterBtn) {
 
     const searchedEmployees = search(inp, currCompanyEmployees);
 
-    const pagination = document.querySelector(".employees-footer");
     if (inp === "") {
       searchEmpty.style.display = "none";
       pagination.style.display = "block"
