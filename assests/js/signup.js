@@ -1,7 +1,6 @@
 import { value } from "./utils.js";
 import { saveCompanies, getCompanies, saveCurrentUser } from "./storage.js";
 
-alert("SIGNUP JS LOADED");
 
 const showPassEye = document.querySelector(".password-toggle");
 showPassEye?.addEventListener("click", () => {
@@ -16,7 +15,7 @@ showPassEye?.addEventListener("click", () => {
 const signupForm = document.querySelector(".signup-form");
 signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("SUBMIT EVENT IS WORKING");
+    
 
     const compName = value(document.querySelector("#company-name"));
     const adminName = value(document.querySelector("#admin-name"));
