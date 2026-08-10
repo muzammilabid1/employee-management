@@ -127,7 +127,7 @@ if (filterBtn) {
     const inp = value(getElemBySelector("#search"));
     const searchEmpty = document.querySelector(".search-empty");
 
-    const searchedEmployees = search(inp);
+    const searchedEmployees = search(inp, currCompanyEmployees);
 
     const pagination = document.querySelector(".employees-footer");
     if (inp === "") {
