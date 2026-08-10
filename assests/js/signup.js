@@ -1,6 +1,8 @@
 import { value } from "./utils.js";
 import { saveCompanies, getCompanies, saveCurrentUser } from "./storage.js";
 
+alert("SIGNUP JS LOADED");
+
 const showPassEye = document.querySelector(".password-toggle");
 showPassEye?.addEventListener("click", () => {
     const passInp = document.querySelector("#password");
