@@ -50,7 +50,7 @@ renderPageNumbers(currCompanyEmployees);
 
 const updateActivePage = () => {
     const buttons = pageNumbers.querySelectorAll("button");
-    
+
     buttons.forEach(button => {
         button.classList.remove("active-page");
     });
@@ -58,10 +58,11 @@ const updateActivePage = () => {
     const activeButton = pageNumbers.querySelector(
         `button:nth-child(${currentPage})`
     );
-    
+
+    if (!activeButton) return;
+
     activeButton.classList.add("active-page");
 };
-
 
 /* ===========================
 Initial Render
