@@ -53,13 +53,20 @@ export const displayEmployee = (employee) => {
   tableBody.append(tableRow);
 }
 const renderEmployees = employees => {
-  const currentPageEmployees = getCurrentPageEmployees(employees);
+    const currentPageEmployees = getCurrentPageEmployees(employees);
 
-  tableBody.innerHTML = "";
+    tableBody.innerHTML = "";
 
-  currentPageEmployees.forEach(employee => {
-    displayEmployee(employee);
-  });
+    if (employees.length === 0) {
+        emptyState.style.display = "flex";
+        return;
+    }
+
+    emptyState.style.display = "none";
+
+    currentPageEmployees.forEach(employee => {
+        displayEmployee(employee);
+    });
 };
 document.addEventListener("paginationChange", e => {
   renderEmployees(e.detail);
