@@ -2,7 +2,7 @@ import { value } from "./utils.js";
 import { saveCompanies, getCompanies, saveCurrentUser } from "./storage.js";
 
 const showPassEye = document.querySelector(".password-toggle");
-showPassEye.addEventListener("click", () => {
+showPassEye?.addEventListener("click", () => {
     const passInp = document.querySelector("#password");
     if (passInp.type === "password") {
         passInp.type = "text";
