@@ -81,7 +81,13 @@ pageNumbers.addEventListener("click", e => {
 });
 const updatePaginationButtons = (employees) => {
     const totalPages = getTotalPages(employees);
-    
+
+    if (totalPages === 0) {
+        previousBtn.disabled = true;
+        nextBtn.disabled = true;
+        return;
+    }
+
     previousBtn.disabled = currentPage === 1;
     nextBtn.disabled = currentPage === totalPages;
 };
